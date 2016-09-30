@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Cedula de inscripción</title>
+
+	<link rel="stylesheet" type="text/css" href="responsive/responsive.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="bootstrap/css/main.css">
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <script src="bootstrap/js/ocultar.js"></script>
+    <script src="bootstrap/js/jquery-1.11.2.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script src="js/jquery-3.1.0.js"></script>
+	<script src="js/validar.js"></script>
+	<script src="jquery-ui/jquery-ui.js"></script>
+	<link rel="stylesheet" href="tema/jquery-ui-themes/themes/sunny/jquery-ui.css">
+	
+</head>
+
+<header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Cambiar Navegacion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="Actividades.html">Inicio</a></li>
+                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sistema de administración<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="formulario.html">Formulario</a></li>
+                            <li><a href="atencion.html">Atención al alumno</a></li>
+                            <li><a href="#"></a></li>
+                 
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Información<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Información</a></li>
+                            <li><a href="#">Información</a></li>
+                            <li><a href="#">Información</a></li>
+                        </ul>
+                    </li>
+                   
+                       <li><a href="Contactos.html">Contacto</a></li>
+                    
+                     <li><a href="logueo.html">Login</a></li>
+                </ul>
+
+            
+            </div>
+    </nav>
+
+</header>
+<body>
+<div class="contenedor container">
+<br>
+<img class="titulo" src="http://www.itsz.edu.mx/images/images/images/images/novohead.png" alt="Instituto Tecnológico Superior de Zaxapoaxtla">
+<br>
+<br>
+
+<script type="text/javascript"> 			
+ 				 function msg(valor){
+ 					var texto =$('<div>'+valor+'</div>');
+ 					texto.dialog({
+ 						modal:true,
+                        width: '420px',
+                        resizable:false,
+                        draggable:false,
+                        title:'Actividad Deportiva o cultural llena.',
+ 						buttons:{
+ 							Cerrar:function(){
+ 								$(this).dialog("close");
+ 							}
+ 						}
+ 					});
+ 				} 			
+ 		</script> 
+<section>
+<div class="container" id="margen">
+	<form  action="datos.php"  method="POST" >
+	<div  class="form-group col-md-4">
+
+		<label >Selecciona la actividad de tu preferencia:</label>
+	
+	<!--con este codigopuedo seleccionar el que sea y me lo inserta sin que tener
+	que poner un "name" a cada una de las opciones, pero se puede poner a cada uno si así se desea.-->
+	
+   
+		<select id="actvity" name="actividad" class="form-control">
+		<option>--Selecciona--</option>
+<option value="Ajedrez" id="AJ" >Ajedrez</option>
+<option value="Artes plasticas" id="AP">Artes platicas</option>
+<option value="Baile moderno" id="BM">Baile moderno</option>
+<option value="Banda de guerra" id="BG">Banda de guerra</option>s
+<option value="Basquetbol" id="B">Basquetbol</option>
+<option value="Cine y animacion" id="CN">Cine y animación</option>
+<option value="Circulo de lectura" id="CL">Circulo de lectura</option>      
+<option value="Danza" id="dan">Danza</option>						
+<option value="Escolta y descubierta" id="ED">Escolta y descubierta</option>		
+<option value="Futbol" id="F">Fútbol</option>
+<option value="Guitarra basica y canto" id="GBC">Guitarra básica y canto</option>
+<option value="Handbol" id="H">Handbol</option>
+<option value="Karate Do" id="KD">Karate Do</option>
+<option value="Pintura" id="P">Pintura</option>
+<option value="Teakwondo" id="T">Teakwondo</option>
+<option value="Teatro" id="TEA">Teatro</option>
+<option value="Voleibol" id="VO">Voleibol</option>
+<option value="Zumba" id="ZUM">Zumba</option>
+		</select>
+		</div>	    
+
+<fieldset>
+	<legend>Datos del alumno</legend>
+	
+	<div class="form-group col-md-6">
+<label>Apellido Paterno:</label>
+
+		<input class="form-control" type="text" placeholder="Paterno" name="paterno" required>
+		<label>Nombre(s):</label>
+		<input class="form-control" type="text" placeholder="Nombre(s)" name="nombre" required>
+
+		
+    </div>
+    
+    <div class="form-group col-md-6">
+		
+		<label>Apellido Materno:</label>
+		<input class="form-control" type="text" placeholder="Materno" name="materno" required>
+		
+		
+    </div>
+    
+
+<div class="col-md-8">
+		
+			<label>Carrera:</label>
+
+	<!--con este codigopuedo seleccionar el que sea y me lo inserta sin que tener
+	que poner un "name" a cada una de las opciones, pero se puede poner a cada uno si así se desea.-->
+	
+		
+		 <select  name="carrera" class="form-control" required>
+	            		<option value="select">Seleccione...</option>
+	            		<option value="IINF">Ing. Informática</option>
+	            		<option value="IA">Ing. Administración</option>
+	           			<option value="IM">Ing. Mecatrónica</option>
+	           			<option value="II">Ing. Industrial</option>
+	           			<option value="LB">Lic. Biología.</option>
+	           			<option value="LG">Lic. Gastronomía</option>
+	           			<option value="IF">Ing. Forestal</option>
+	            	</select>
+	            	</div>
+	            
+		
+			    <div class="form-group col-md-6">	
+		<label>Grado y Grupo:</label>
+		<input class="form-control" type="text" placeholder="1 A" name="grado" required>
+</div>
+
+<div class="form-group col-md-6">
+		<label>Número de control:</label>
+		<input  class="form-control" type="text" placeholder="15ZP0015" name="matricula" style="text-transform:uppercase" required>
+		</div>
+<div class="form-group col-md-12 radio">
+
+Sexo:<label class="radio-inline">
+<div class="col-xs-6 ">
+<input type="radio"  name="sexo" value="Masculino" required>Masculino
+</div>
+<div class="col-xs-6 ">
+<input type="radio"  name="sexo" value="Femenino" required>Femenino
+
+</div>
+    </label>
+</div>
+
+<div class="form-group col-md-6">
+		<label>Tipo sanguíneo:</label>
+		<input  class="form-control" type="text" name="sangre" required>
+
+</div>
+    
+    <div class="form-group col-md-6">
+		<label>Alergias o Padecimiento:</label>
+		<textarea class="form-control" rows="3" name="alergias"></textarea> 
+</div>
+             <h2 class="col-md-12">Tallas</h2>
+            <div class="form-group  col-md-6" >
+           
+				<label>Estatura:</label>
+				<input  class="form-control" placeholder="180 cm" name="estatura" required>
+
+                <label>Peso:</label>
+				<input  class="form-control" type="text" placeholder="80 kilos" name="kilos" required>
+</div>
+						
+
+				
+				<br>
+				<div class="col-md-6 form-group">
+				<label>Calzado:</label>
+				<input class="form-control" type="text" placeholder="Centimetros" name="zapato" required>
+
+				<label>Playera</label>
+				<input  class="form-control" type="text" name="pla" placeholder="Chica, mediana o grande" required>
+
+            </div>
+            
+        <div class="col-md-6 form-group">
+				<label>Short</label>
+				<input class="form-control" type="text" name="short" required>
+
+    </div>
+                       <div class="col-md-6">
+            			<label>Pans</label>
+				<input  class="form-control" type="text" name="pans" required>
+	
+</div>
+	
+
+</fieldset>
+
+<fieldset>
+	<legend>Dirección actual</legend>
+
+
+<div class="form-group">
+		<label>Domicilio:</label>
+		<div class="form-inline">
+		<input  class="form-control" name="calle" type="text"  placeholder="calle" required>
+       <input   class="form-control" name="numero" type="text"  placeholder="Numero" required>
+      <input  class="form-control" name="colonia" type="text"  placeholder="Colonia" required>
+      </div>
+</div>
+		
+		<div class="form-group col-md-6">
+		<label>Localidad y/o Municipio:</label>
+		<input class="form-control" type="text" name="municipio" required>
+</div>
+    <div class="form-group col-md-6">
+		<label>E-mail:</label>
+		<input class="form-control" id="campo" type="email" placeholder="alguien@example.com" name="correo" required>
+</div>
+
+    
+    <div class="form-group">
+    
+    <div class="form-inline">
+		<label>Entidad:</label>
+		<input  class="form-control" type="text" name="entidad" placeholder="Puebla" required>
+		
+		<label>Codigo postal:</label>
+		<input  class="form-control" type="text" placeholder="73680" name="cpostal" required>
+
+		<label>Teléfono:</label>
+		<input class="form-control" type="text" name="tel" required>
+</div>
+    </div>
+   
+	<div class="form-group col-md-4 col-md-offset-3">
+<label>Mes de ingreso al instituto</label>
+<input class="form-control" type="text" name="ingreso" required>
+</div>
+
+		</fieldset>
+		<br>
+	<fieldset>	
+<legend>Datos del Padre o Tutor(a)</legend>
+<br>
+
+<div class="form-group col-md-6">
+<label>Apellido Paterno:</label>
+<input class="form-control" type="text" name="Tupaterno" placeholder="Paterno" required>
+		
+		<label>Apellido Materno:</label>
+		<input class="form-control" type="text" placeholder="Materno" name="Tumaterno" required>
+</div>	
+    
+    	<div class="form-group col-md-6">	
+		<label>Nombre(s):</label>
+		<input  class="form-control" type="text" placeholder="Nombre(s)" name="Tunombre" required>
+		
+		<label>Teléfono:</label>
+		<input class="form-control" type="tel" name="Tutel" required>
+	</div>
+
+<div class="col-md-6 col-md-offset-3 form-group">
+<button type="submit" name="envio" value="Enviar" class="btn btn-primary btn-lg pull-center"  data-toggle="modal" data-target="#myModal" >Enviar
+</button>
+
+   <a href="atencion.html" class="btn btn-primary btn-lg pull-right">Siguiente</a>
+
+
+	
+</fieldset>
+
+</div>
+</form>
+</div>
+</section>
+	
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+section{
+	width: 90%;
+	margin-left: 3%;
+}
+header{
+	width: 80%;
+	margin-left: 5%;
+	
+	height: 50px;
+	
+}
+
+header h1{
+font-size: 30px;color:blue;text-align: center;
+}
+header img{
+	float: left;
+	margin-left: 10px;
+}
+#dos_columnas {
+    height: auto;
+    list-style-type: none;
+    overflow: auto;
+    padding: 0px;
+    width: 60%;
+    margin-left: 5%;
+    float: left;
+    border: 2px solid gray;
+}
+#caracteristicas {
+    line-height: 17px;
+    list-style: outside none none;
+    margin: 15px 0px 1em;
+    color: #069;
+}
+#caracteristicas li {
+    margin: 0px 0px 25px;
+}
+.caracteristicas_imagen {
+    float: left;
+    margin: -5px 20px 0px 0px;
+}
+.contenido_2_1 {
+    font-size: 15px;
+    color: #0E0F0F;
+}
+
+form{
+ overflow: auto;
+     padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 5px;
+    text-align: center;
+    background-color: #F1F1F1;
+    display: flex;
+    width: 25%;
+    float: right;
+}
+
+.columna_dos{
+	padding-left: 3px;}
+form label{
+	float: left;
+	margin-left: 35px;
+}
+
+form input{
+	width: 80%;
+
+}
+
+.boton{
+	background-color: #3686D7;
+	padding: 4px;
+	margin-top: 5px;
+	border-radius: 10px;
+	color: white;
+	font-size: 12px;
+	font-family: arial;
+	width: 35%;
+	float: left;
+	margin-left: 35px;
+
+}
+.boton:hover{
+	background-color: #88B1D9;
+}
+.liga{
+	font-size: 15px; text-align: center;
+	margin-left: 4px;
+}
+
+.titulo{
+	text-align: center;
+	margin-left: 25px;
+	font-size: 25px;
+}
+body {
+    font-family: Arial,Helvetica,sans-serif;
+	background: src
+	
+}
+footer{
+	clear: both;
+	height: 60px;
+	width: 90%;
+	margin-left: 4%;
+}
+
+table{
+	border: 2px solid gray;
+	margin-left: 13%;
+}
+table td{
+	border: 2px solid black;
+}
+#aten{
+	text-align: center;
+	color: brown;
+	background-color: aquamarine;
+	margin-left: 11%;
+	padding-top: 30px;
+	margin-right: 6%;
+	width: 80%;
+	height: 80px;
+	border: 3px solid red;
+}

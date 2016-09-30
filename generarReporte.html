@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Generar Reporte</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="bootstrap/css/main.css">
+ <!--Codigo para crear una funcion, par la cual permita abrir una nueva pestaña-->
+ <script type="text/javascript">
+function procesar(xform){
+window.open(xform, 'nventana', 'width=1100,height=600,status=yes,resizable=yes,scrollbars=yes');
+}
+</script>
+ 
+</head>
+<br>
+<header>
+<div class="container contenedorII">
+
+<img class=" img-responsive" src="http://www.itsz.edu.mx/images/images/images/images/novohead.png" alt="Instituto Tecnológico Superior de Zaxapoaxtla"
+
+</div>
+</header>
+<body>
+<!--Para pantallas pequeñas como la de los telefonos-->
+ <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Cambiar Navegacion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="right"><a href="Modificar.php">Actualizar datos</a></li>
+                   
+                   
+                       <li><a href="Eliminar.php">Dar de baja</a></li>
+                    
+                     <li><a href="cerrar.php">Cerrar Sesión</a></li>
+                </ul>
+
+            
+            </div>
+    </nav>
+	<br>
+	
+		
+<section class="well contenedorII">
+	
+	<div class="container well" id="sha">
+	
+		<form class="login" action="listas.php" method="POST" target="nventana" onsubmit="procesar(this.action);">
+				<div class="form-group">
+					
+			<div class="msg">
+				<label >Aqui puedes elegir que actividad en especifica para gernerar un lista en formato PDF con solo seleccionarla Actividad-Cultural que desees.</label>
+	</div>
+	<!--con este codigopuedo seleccionar el que sea y me lo inserta sin que tener
+	que poner un "name" a cada una de las opciones, pero se puede poner a cada uno si así se desea.-->
+	
+		<select name="actividad" class="form-control">
+		<option>--Selecciona--</option>
+<option value="Guitarra basica y canto">Guitarra basica y canto</option>
+<option value="Ajedrez">Ajedrez</option>
+<option value="Artes Plasticas">Artes platicas</option>
+<option value="Baile Moderno">Baile moderno</option>
+<option value="Banda de guerra">Banda de guerra</option>
+<option value="Basquetbol">Basquetbol</option>
+<option value="Cine y animacion">Cine y animación</option>
+<option value="Circulo de lectura">Circulos de lectura</option>      
+<option value="Danza">Danza</option>						
+<option value="Escolta y Descubierta">Escolta y descubierta</option>		
+<option value="Futbol">Fútbol</option>
+<option value="Handbol">Handbol</option>
+<option value="Karate Do">Karate Do</option>
+<option value="Pintura">Pintura</option>
+<option value="Teakwondo">Teakwondo</option>
+<option value="Teatro">Teatro</option>
+<option value="Voleibol">Voleibol</option>
+<option value="Zumba"> Zumba</option>
+		</select>
+ 	</div>
+				
+				<button class="btn btn-lg btn-primary btn-block" type="submit" >Gernerar PDF</button>		
+ 
+	    </form>
+	
+	</div >
+	
+	    <!--Espacio para crear el formulario para generar un pdf con todos los datos de la base de datos-->
+	   <div class="container well" id="sha1">
+            <form action="funcion.php" method="post" target="nventana" onsubmit="procesar(this.action);">
+            <div class="form-group">
+	        	<div class="msg col-md-8">
+				<label >En este apartado podrar generar un PDF con la información de los alumnos que necesitan un trato especial. </label>
+	</div>
+        	</div>
+	        <button class="btn btn-lg btn-primary " type="submit" >Gernerar PDF</button>
+	        
+	    </form>
+
+	</div>
+	
+    </section>
+
+	<script src="bootstrap/js/jquery-1.11.2.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

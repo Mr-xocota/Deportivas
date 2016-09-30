@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Programa de atención al alumno</title>
+
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="bootstrap/css/main.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<script src="bootstrap/js/ocultar.js"></script>
+</head>
+<header>
+<!--Para pantallas pequeñas como la de los telefonos-->
+ <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Cambiar Navegacion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="Actividades.html">Inicio</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sistema de administración<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="formulario.html">Formulario</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    
+                      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Información<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Información</a></li>
+                            <li><a href="#">Información</a></li>
+                        
+                        </ul>
+                    </li>
+                       
+                    <li><a href="Contactos.html">Contacto</a></li>
+                    
+        
+                     <li><a href="logueo.html">Loguin</a></li>
+                </ul>
+            
+
+              
+            </div>
+        </nav>
+        </header>
+<body>
+<div class="container">    
+
+<img class=" img-responsive" src="http://www.itsz.edu.mx/images/images/images/images/novohead.png" alt="Instituto Tecnológico Superior de Zaxapoaxtla"
+
+</div>
+
+ <div class="container well" >
+
+	<h1>PROGRAMA DE ATENCIÓN AL ALUMNO</h1>
+	
+	<!--Cuestionario-->
+	<form class="container"  id="sha2" action="sintomas.php" method="POST" name="atencion">
+ <div class="container-fluid">
+ <br>
+ <div class="row">
+    
+ <div class="col-md-6 ">
+ <label for="N. Control">N. Control:</label>    
+<input type="text" name="control" style="text-transform:uppercase" required>    
+  </div>
+ 
+ </div>
+ <br>
+  <div class="row">
+  1. ¿Te han diagnosticado algún problema cardiaco?
+   
+  <div class="col-md-6 col-md-offset-3">
+ 
+<label class="radio-inline" ><input type="radio"  name="preg1" value="Si" /> Sí</label>
+<label class="radio-inline"><input type="radio" name="preg1" value="No" /> No </label>
+    
+  </div>
+    </div>
+   
+   <div class="row">
+   2. ¿Tienes dolores en el corazón o pecho con frecuencia y sin causa alguna?
+   <div class="col-md-6 col-md-offset-3">
+  <label class="radio-inline">  <input type="radio" name="preg2" value="Si" /> Si</label>
+  <label class="radio-inline">  <input type="radio" name="preg2" value="No" /> No</label>
+    </div>
+  </div>
+  
+  <div class="row">
+  3. ¿Sueles sentirte cansado con mareos frecuentes o haber perdido el conocimiento sin alguna causa aparente?
+  <div class="col-md-6 col-md-offset-3">
+    <label class="radio-inline">  <input type="radio" name="preg3" value="Si" /> Si</label>
+    <label class="radio-inline">  <input type="radio" name="preg3" value="No" />No </label>
+    </div>
+    </div>
+
+  
+   <div class="row">
+     4. ¿Tienes dolores en los huesos o articulaciones por alguna artritis u otra causa que manifieste ardor con cualquier movimiento?
+  <div class="col-md-6 col-md-offset-3">
+     <label class="radio-inline">  <input type="radio" name="preg4" value="Si" />Si </label>
+  <label class="radio-inline">  <input type="radio" name="preg4" value="No" />No </label>
+    
+    </div>
+  </div>
+  
+  
+   <div class="row">
+   5. ¿Toma algún medicamento por enfermedad crónica?<br />
+  <div class="col-md-6 col-md-offset-3">
+    <label class="radio-inline">  <input type="radio" name="preg5" id="Conocido" value="Si" onClick="mostrar();" />Si</label>
+  <label class="radio-inline">  <input type="radio" name="preg5" id="Conocido" value="No" onClick="mostrar();"/>No</label>
+   
+     <div class="form-group" id="otro" style="display:none;">
+     <label for="texto">Menciona que medicamento es:</label>   
+    <input type="text" class="form-control" name="preg51">    
+    </div>
+    
+    </div>
+  </div>
+  
+  
+   <div class="row">
+     6. ¿Existe alguna causa no mencionada aquí por la cual no debas realizar exfuerzo físico?<br />
+  <div class="col-md-6 col-md-offset-3">
+     <label class="radio-inline">  <input type="radio" id="preg6" name="preg6" value="Si" onClick="mostrarD();"/>Si</label>
+  <label class="radio-inline">  <input type="radio" id="preg6" name="preg6" value="No" onclick="mostrarD();" />No </label>
+   
+    <div class="form-group" id="otros" style="display:none;">
+    <label for="texto2">Menciona cual es:</label>  
+    <input type="text" class="form-control" name="preg62">    
+    </div>
+    
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+   7. ¿Tienes dolores en los huesos o articulaciones por alguna artritis u otra causa que manifieste ardor con cualquier movimiento?<br />
+   
+   <div class="col-md-6 col-md-offset-3">
+    <label class="radio-inline ">  <input type="radio" name="preg7" value="Si" />Si</label>
+  <label class="radio-inline ">  <input type="radio" name="preg7" value="No" />No</label>
+   
+    </div>
+  </div>
+  
+  <input class="btn btn-primary " type="submit" value="Enviar">
+</div>
+    </form>
+    
+    <!-- Button trigger modal 
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Recordatorio
+</button>-->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-toggle="modal" data-target="#myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Aviso</h4>
+      </div>
+      <div class="modal-body">
+        Recuerda de realzar el cuestionario de "Atención al alunmo", localizada en la parte de Sistema de administracion.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+    </div>
+
+
+<!--libreria jquery para realizar efectos-->
+<script src="bootstrap/js/jquery-1.11.2.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
